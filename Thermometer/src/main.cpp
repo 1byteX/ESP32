@@ -3,17 +3,16 @@ int digital;
 int analog;
 boolean x = true;
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
   pinMode(32, INPUT);
-  pinMode(A3, OUTPUT);
 }
 
 void loop() {
-  digitalWrite(32, x);
   int digital = digitalRead(32);
   int analog = analogRead(32);
-  Serial.print("Digital: " + digital);
-  Serial.print("Analog: " + analog);
-  x != x;
-  sleep(1000);
+  Serial.print("Digital: ");
+  Serial.println(digital);
+  Serial.print("Analog: ");
+  Serial.println(analog);
+  delay(1000);
 }
